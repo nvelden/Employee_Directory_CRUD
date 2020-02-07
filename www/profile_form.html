@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="header-container">
+      <img src="profile_header.jpg" class="card-img" alt="profile_header">
+  </div>
+  <div class="profile-img-container">
+     {{ profile_image }}
+  <!-- <img src="no_picture.png" class="profile-picture" alt="profile-picture"> -->
+  <h4>{{ title }} {{ first_name }} {{ last_name }}</h4>
+  <h4 class="sub-title">{{ job_title }}</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item"><i class="profile fa fa-users"></i>{{ department }}</li>
+  <li class="list-group-item"><i class="profile fa fa-map"></i> {{ room }}</li>
+  <li class="list-group-item"><i class="profile fa fa-phone"></i>{{ phone_internal }}</li>
+  <li class="list-group-item"><i class="profile fa fa-envelope"></i>
+    {{ email }}</li>
+  <li class="list-group-item"><i class="profile fa fa-clock"></i>Working Times<br><br>
+  <table>
+    <tr>
+      <td><div class="day-styling">Mon</div></td>
+      <td><div class="time-styling">{{ monday }}</div></td>
+      <td><div class="day-styling">Fri</div></td>
+      <td><div class="time-styling">{{ friday }}</div></td>
+    </tr>
+    <tr>
+      <td><div class="day-styling">Tue</div></td>
+      <td>{{ tuesday }}</td>
+      <td><div class="day-styling">Sat</div></td>
+      <td><div class="time-styling">{{ saturday }}</div></td>
+    </tr>
+    <tr>
+      <td><div class="day-styling">Wed</div></td>
+      <td><div class="time-styling">{{ wednesday }}</div></td>
+      <td><div class="day-styling">Sun</div></td>
+      <td><div class="time-styling">{{ sunday }}</div></td>
+    </tr>
+    <tr>
+      <td><div class="day-styling">Thr</div></td>
+      <td><div class="time-styling">{{ thursday }}</div></td>
+    </tr>
+  </table>
+  <br>
+  {{ note }}
+</ul>
+<div class="profile modal-footer">
+  <button class="btn btn-default" type="button" data-dismiss="modal">Dismiss</button>
+</div>
+</div>
