@@ -111,7 +111,7 @@ ui <- fluidPage(title = "Employee Directory",
     dataTableOutput("employees_table"),
         div(class="footer-container",
             uiOutput("footer_date"),
-            div(class="footer-title", HTML("Noveld &copy; - Shiny Contest 2020"))),
+            div(class="footer-title", HTML("Niels van der Velden &copy; - Table Contest 2020"))),
     tags$script(src="index.js"))
    
 #################Server############################################
@@ -576,7 +576,7 @@ succes_alert <- reactive({
 
 observeEvent(input$submit, priority = 20, {
     
-  file_ext <- c("JPG", "jpg", "PNG", "png")
+  file_ext <- c("JPG", "jpg", "PNG", "png", "JPEG", "jpeg", "JPE", "jpe", "jfif", "JFIF")
   File <- input$picture_upload
   
   #check if first name or last name containes illegal characters
@@ -698,7 +698,7 @@ if(illegal_char == TRUE){
              confirmButtonCol = "#337ab7")
 } else if(file_cached == FALSE){
     
-    file_ext <- c("JPG", "jpg", "PNG", "png")
+  file_ext <- c("JPG", "jpg", "PNG", "png", "JPEG", "jpeg", "JPE", "jpe", "jfif", "JFIF")
 
     #Check for correct file format
     if (!tools::file_ext(File$name) %in% file_ext){
